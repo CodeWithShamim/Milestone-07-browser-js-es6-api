@@ -10,6 +10,12 @@ const addItem = () => {
     item.value = '';
 }
 
+// place order 
+const placeOrder = () => {
+    ul.textContent = "";
+    localStorage.removeItem('cart');
+}
+
 // display data from local storage 
 const display = () => {
     const ul = document.getElementById('ul');
@@ -45,3 +51,6 @@ const addCartToLocal = (itemValue) => {
     const cartStringify = JSON.stringify(cart);
     localStorage.setItem('cart', cartStringify);
 };
+
+// display data from local storage 
+display();
