@@ -1,7 +1,10 @@
 const addItem = () => {
     const item = document.getElementById('item');
     const itemValue = item.value;
-    console.log(itemValue);
+    // console.log(itemValue);
+    if (!itemValue) {
+        return;
+    }
     // add cart to local storage
     addCartToLocal(itemValue)
     item.value = '';
@@ -10,9 +13,14 @@ const addItem = () => {
 // display data from local storage 
 const display = () => {
     const ul = document.getElementById('ul');
-    const li = document.createElement('li');
-    li.innerText = 12;
-    ul.appendChild(li);
+    const displayValues = getCart();
+    for (const displayValue in displayValues) {
+        const li = document.createElement('li');
+        // console.log(displayValue);
+        li.innerText = displayValue;
+        ul.appendChild(li);
+    };
+
 
 };
 
