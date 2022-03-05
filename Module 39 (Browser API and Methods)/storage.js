@@ -47,7 +47,12 @@ const getCart = () => {
 const addCartToLocal = (itemValue) => {
     const cart = getCart();
     // set property and value in object 
-    cart[itemValue] = 1;
+    if (cart[itemValue]) {
+        cart[itemValue] = cart[itemValue] + 1;
+
+    } else {
+        cart[itemValue] = 1;
+    }
     const cartStringify = JSON.stringify(cart);
     localStorage.setItem('cart', cartStringify);
 };
