@@ -9,6 +9,7 @@ function submitIssue(e) {
     const status = 'Open';
 
     const issue = { id, description, severity, assignedTo, status };
+    // console.log(issue);
     let issues = [];
     if (localStorage.getItem('issues')) {
         issues = JSON.parse(localStorage.getItem('issues'));
