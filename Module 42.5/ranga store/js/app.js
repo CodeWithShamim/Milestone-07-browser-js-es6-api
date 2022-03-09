@@ -69,7 +69,7 @@ const updateTaxAndCharge = () => {
         setInnerText("total-tax", priceConverted * 0.4);
     }
 
-    updateTotal()
+    updateTotal();
 };
 
 //grandTotal update function
