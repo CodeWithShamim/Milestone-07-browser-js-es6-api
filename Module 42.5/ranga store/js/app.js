@@ -6,7 +6,7 @@ const loadProducts = () => {
 
 // show all product in UI 
 const showProducts = (products) => {
-    console.log(products);
+    // console.log(products);
     const allProducts = products.map((pd) => pd);
     for (const product of allProducts) {
         const image = product.image;
@@ -68,6 +68,8 @@ const updateTaxAndCharge = () => {
         setInnerText("delivery-charge", 60);
         setInnerText("total-tax", priceConverted * 0.4);
     }
+
+    updateTotal()
 };
 
 //grandTotal update function
