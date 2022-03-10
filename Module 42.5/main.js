@@ -45,7 +45,7 @@ const deleteIssue = id => {
 const fetchIssues = () => {
     const issues = JSON.parse(localStorage.getItem('issues'));
     const issuesList = document.getElementById('issuesList');
-    issuesList.innerHTML = '';
+    issuesList.textContent = '';
 
     for (var i = 0; i < issues.length; i++) {
         const { id, description, severity, assignedTo, status } = issues[i];
