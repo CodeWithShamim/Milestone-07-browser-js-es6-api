@@ -1,0 +1,13 @@
+a:hover {
+    color: blue;
+    font-size: 20px;
+}
+
+a:focus {
+    color: rgb(9, 255, 0);
+}
+
+a:visited {
+    color: rgb(255, 145, 0);
+    font-size: 40px;
+}
